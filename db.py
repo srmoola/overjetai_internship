@@ -17,10 +17,10 @@ def connect_with_connector():
     # Cloud Secret Manager (https://cloud.google.com/secret-manager) to help
     # keep secrets safe.
 
-    instance_connection_name = 'calcium-backup-338422:us-central1:dental-analytic-db'
-    db_user = 'oa-intern'  # e.g. 'my-db-user'
-    db_pass = 'oa2023'  # e.g. 'my-db-password'
-    db_name = 'postgres'  # e.g. 'my-database'
+    instance_connection_name = os.environ['INSTANCE_CONNECTION_NAME']
+    db_user = os.environ['DB_USER']  # e.g. 'my-db-user'
+    db_pass = os.environ['DB_PASS']  # e.g. 'my-db-password'
+    db_name = os.environ['DB_NAME']  # e.g. 'my-database'
 
 
     # initialize Cloud SQL Python Connector object
